@@ -1,0 +1,100 @@
+{
+  "environment": {
+    "python": "3.13.9",
+    "implementation": "CPython",
+    "free_threading_build": false,
+    "gil_enabled": true,
+    "switch_interval_s": 0.005,
+    "cpu_count": 28,
+    "system": "Windows 11 (AMD64)",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel"
+  },
+  "workers": 8,
+  "repeats": 3,
+  "results": [
+    {
+      "key": "fnv1a",
+      "title": "CPU – czysty Python (FNV-1a)",
+      "files": 16,
+      "total_bytes": 16777216,
+      "times": {
+        "sequential": 0.87445370000205,
+        "threads": 0.8730051000020467,
+        "processes": 0.275922000000719
+      },
+      "all_runs": {
+        "sequential": [
+          0.9541276000090875,
+          0.87445370000205,
+          0.8725702999799978
+        ],
+        "threads": [
+          0.8729219000088051,
+          0.8730051000020467,
+          0.8785103999834973
+        ],
+        "processes": [
+          0.2833626999927219,
+          0.275922000000719,
+          0.2661212999955751
+        ]
+      }
+    },
+    {
+      "key": "sha256",
+      "title": "CPU – hashlib SHA-256",
+      "files": 16,
+      "total_bytes": 268435456,
+      "times": {
+        "sequential": 0.17894169999635778,
+        "threads": 0.03025139999226667,
+        "processes": 0.16973560000769794
+      },
+      "all_runs": {
+        "sequential": [
+          0.27922729999409057,
+          0.17576510002254508,
+          0.17894169999635778
+        ],
+        "threads": [
+          0.03216299999621697,
+          0.03025139999226667,
+          0.02953729999717325
+        ],
+        "processes": [
+          0.16973560000769794,
+          0.1768424000183586,
+          0.16893119999440387
+        ]
+      }
+    },
+    {
+      "key": "io",
+      "title": "I/O – dysk sieciowy (symulacja)",
+      "files": 32,
+      "total_bytes": 2097152,
+      "times": {
+        "sequential": 1.6223309999913909,
+        "threads": 0.2049999000155367,
+        "processes": 0.3559384999971371
+      },
+      "all_runs": {
+        "sequential": [
+          1.8244340000092052,
+          1.6223309999913909,
+          1.6213340999966022
+        ],
+        "threads": [
+          0.2051915000192821,
+          0.2049999000155367,
+          0.20466190000297502
+        ],
+        "processes": [
+          0.38103119999868795,
+          0.3559384999971371,
+          0.35434789999271743
+        ]
+      }
+    }
+  ]
+}
