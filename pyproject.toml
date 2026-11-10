@@ -1,0 +1,19 @@
+[project]
+name = "dupfinder"
+version = "1.0.0"
+description = "Wyszukiwarka zduplikowanych plików – projekt zaliczeniowy (Python zaawansowany)"
+requires-python = ">=3.12"
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = ["pytest", "matplotlib"]
+
+[project.scripts]
+dupfinder = "dupfinder.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["dupfinder*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

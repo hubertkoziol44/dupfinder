@@ -1,0 +1,4 @@
+# Rdzeń aplikacji korzysta wyłącznie z biblioteki standardowej (Python 3.12+).
+# Poniższe pakiety są opcjonalne:
+matplotlib>=3.8   # wykres w benchmarks/gil_benchmark.py (opcja --chart)
+pytest>=8         # alternatywny sposób uruchamiania testów (działają też z unittest)
